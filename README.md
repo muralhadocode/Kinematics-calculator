@@ -4,5 +4,5 @@
 Ela segue todas as medidas do SI (Sistema internacional de unidades), o que significa que voce DEVE SEMPRE conveter todas as unidades de tempo, peso, velocidade, etc. para as que são os padrões do SI além disso futuramente planejo lançar ela como aplicativo de contas.
 Ela também tem todas as contas de MU, MUV e MRUV (no momento as outras estão sendo desenvolvidas) e em cada uma das equações você tem a opção de encontrar todas as icógnitas, eu digo TODAS.
 ELa contém mais de 700 linhas atualmente.
-![Uploading 0016-uam_1_orig (2) (1).gif…]()
+![](file:///C:/Users/murip/Downloads/0016-uam_1_orig%20(2)%20(1).gif)
 13/05/2026
