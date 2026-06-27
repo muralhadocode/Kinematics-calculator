@@ -131,8 +131,54 @@ while i == True:
                     print("Invalid degree")
             else:
                 print("Invalid input")
+        elif pr_mo_slct == 2:
+            v0 = int(input("Type your initial velocity in m/s(meters per second): "))
+            sin0 = int(input("Type the sine of 0(theta) in degrees(only for 30°, 45° and 60°): "))
+            g = int(input("Type your gravity in m/s²(meters per second squared): "))
+            if sin0 == 30 or "30°":
+                sin0 = 1/2
+                r = (v0^2*sin0*2)/2*g
+                print(f"Your horizontal range is {r}m(meters)")
+            elif sin0 == 45 or "45°":
+                sin0 = 2^0.5
+                r = (v0^2*sin0*2)/2*g
+                print(f"Your horizontal range is {r}m(meters)")
+            elif sin0 == 60 or "60°":
+                sin0 = 3^0.5
+                r = (v0^2*sin0*2)/2*g
+                print(f"Your horizontal range is {r}m(meters)")
+            else:
+                print("Invalid degree")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         else:
             print("Invalid input")
-
+    else:
+         print("Invalid input")
 
             
