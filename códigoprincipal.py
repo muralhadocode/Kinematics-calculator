@@ -6,6 +6,7 @@ print("Welcome to the Kinematics calculator! - Select the area that your equatio
 print("1 - Core equations")
 print("2 - Primary equations")
 print("3 - Projectile motion")
+print("4 - Circular movement")
 
 slct = int(input("Type the number of the part that you want to enter: "))
 while i == True:
@@ -38,6 +39,7 @@ while i == True:
             print("1 - Core equations")
             print("2 - Primary equations")
             print("3 - Projectile motion")
+            print("4 - Circular movement")
             slct = int(input("Type the number of the part that you want to enter: "))
         else:
                 print("Invalid input")
@@ -79,6 +81,7 @@ while i == True:
             print("1 - Core equations")
             print("2 - Primary equations")
             print("3 - Projectile motion")
+            print("4 - Circular movement")
             slct = int(input("Type the number of the part that you want to enter: "))
         else:
             print("Invalid input")
@@ -88,6 +91,7 @@ while i == True:
         print("2 - Horizontal range")
         print("3 - Maximum height")
         print("4 - Flight time")
+        print("5 - Go back")
         pr_mo_slct = int(input("Type the equation you want to use: "))
 
         if pr_mo_slct == 1:
@@ -137,47 +141,93 @@ while i == True:
             g = int(input("Type your gravity in m/s²(meters per second squared): "))
             if sin0 == 30 or "30°":
                 sin0 = 1/2
-                r = (v0^2*sin0*2)/2*g
+                r = (v0^2*sin0*2)/g
                 print(f"Your horizontal range is {r}m(meters)")
             elif sin0 == 45 or "45°":
                 sin0 = 2^0.5
-                r = (v0^2*sin0*2)/2*g
+                r = (v0^2*sin0*2)/g
                 print(f"Your horizontal range is {r}m(meters)")
             elif sin0 == 60 or "60°":
                 sin0 = 3^0.5
-                r = (v0^2*sin0*2)/2*g
+                r = (v0^2*sin0*2)/g
                 print(f"Your horizontal range is {r}m(meters)")
             else:
                 print("Invalid degree")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        elif pr_mo_slct == 3:
+            v0 = int(input("Type your initial velocity in m/s(meters per second): "))
+            sin0 = int(input("Type the sine of 0(theta) in degrees(only for 30°, 45° and 60°): "))
+            g = int(input("Type your gravity in m/s²(meters per second squared): "))
+            if sin0 == 30 or "30°":
+                sin0 = 1/2
+                h = (v0^2*sin0^2)/2*g
+                print(f"Your maximum height is {h}m(meters)")
+            elif sin0 == 45 or "45°":
+                sin0 = 2^0.5
+                h = (v0^2*sin0^2)/2*g
+                print(f"Your maximum height is {h}m(meters)")
+            elif sin0 == 60 or "60°":
+                sin0 = 3^0.5
+                h = (v0^2*sin0^2)/2*g
+                print(f"Your maximum height is {h}m(meters)")
+            else:
+                print("Invalid degree")
+        elif pr_mo_slct == 4:
+            v0 = int(input("Type your initial velocity in m/s(meters per second): "))
+            sin0 = int(input("Type the sine of 0(theta) in degrees(only for 30°, 45° and 60°): "))
+            g = int(input("Type your gravity in m/s²(meters per second squared): "))
+            if sin0 == 30 or "30°":
+                sin0 = 1/2
+                t = (v0*2*sin0)/g
+                print(f"Your maximum height is {t}m(meters)")
+            elif sin0 == 45 or "45°":
+                sin0 = 2^0.5
+                t = (v0*2*sin0)/g
+                print(f"Your maximum height is {t}m(meters)")
+            elif sin0 == 60 or "60°":
+                sin0 = 3^0.5
+                t = (v0*2*sin0)/g
+                print(f"Your maximum height is {t}m(meters)")
+            else:
+                print("Invalid degree")
+        elif pr_mo_slct == 5:
+            print("1 - Core equations")
+            print("2 - Primary equations")
+            print("3 - Projectile motion")
+            print("4 - Circular movement")
+            slct = int(input("Type the number of the part that you want to enter: "))
         else:
             print("Invalid input")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     else:
          print("Invalid input")
 
