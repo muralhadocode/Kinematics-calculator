@@ -5,6 +5,7 @@ i = True
 print("Welcome to the Kinematics calculator! - Select the area that your equation is in!")
 print("1 - Core equations")
 print("2 - Primary equations")
+print("3 - Projectile motion")
 
 slct = int(input("Type the number of the part that you want to enter: "))
 while i == True:
@@ -33,15 +34,20 @@ while i == True:
             dT = tfinal - tinitial
             aAC = dV/dT
             print(f"Your average acceleration is {aAC}m/s²(meters per second squared)")
-        else:
+        elif cr_eq_slct == 3:
             print("1 - Core equations")
+            print("2 - Primary equations")
+            print("3 - Projectile motion")
             slct = int(input("Type the number of the part that you want to enter: "))
+        else:
+                print("Invalid input")
     
     if slct == 2:
         print("1 - Velocity-Time")
         print("2 - Position-Time")
         print("3 - Velocity-Squared")
         print("4 - Average-Velocity")
+        print("5 - Go back")
         pr_eq_slct = int(input("Type the number of the equation you want to use: "))
         if pr_eq_slct == 1:
             v0 = int(input("Type your initial velocity in m/s(meters per second): "))
@@ -69,8 +75,64 @@ while i == True:
             v = int(input("Type your velocity in m/s(meters per second): "))
             dX = 0.5*(v0+v)*t
             print(f"Your delta x is {dX}m(meters)")
-        else:
+        elif pr_eq_slct == 5:
             print("1 - Core equations")
+            print("2 - Primary equations")
+            print("3 - Projectile motion")
             slct = int(input("Type the number of the part that you want to enter: "))
+        else:
+            print("Invalid input")
+
+    if slct == 3:
+        print("1 - Horizontal and vertical components")
+        print("2 - Horizontal range")
+        print("3 - Maximum height")
+        print("4 - Flight time")
+        pr_mo_slct = int(input("Type the equation you want to use: "))
+
+        if pr_mo_slct == 1:
+            print("1 - Y velocity")
+            print("2 - X velocity")
+            pr_mo_slct_hv = int(input("Type the equation you want to use: "))
+            
+            if pr_mo_slct_hv == 1:
+                v0 = int(input("Type your initial velocity in m/s(meters per second: )"))
+                sin0 = int(input("Type the sine of 0(theta) in degrees(only for 30°, 45° and 60°): "))
+                if sin0 == 30 or "30°":
+                    sin0 = 1/2
+                    vY = sin0*v0
+                    print(f"Your velocity for Y is {vY}m/s(meters per second)")
+                elif sin0 == 45 or "45°":
+                    sin0 = 2^0.5
+                    vY = sin0*v0
+                    print(f"Your velocity for Y is {vY}m/s(meters per second)")
+                elif sin0 == 60 or "60°":
+                    sin0 = 3^0.5
+                    vY = sin0*v0
+                    print(f"Your velocity for Y is {vY}m/s(meters per second)")
+                else:
+                    print("Invalid degree")
+            elif pr_mo_slct_hv == 2:
+                v0 = int(input("Type your initial velocity in m/s(meters per second: )"))
+                cos0 = int(input("Type the cossine of 0(theta) in degrees(only for 30°, 45° and 60°): "))
+                if cos0 == 30 or "30°":
+                    cos0 = (3^0.5)/2
+                    vX = cos0*v0
+                    print(f"Your velocity for X is {vX}m/s(meters per second)")
+                elif cos0 == 45 or "45°":
+                    cos0 = (2^0.5)/2
+                    vX = cos0*v0
+                    print(f"Your velocity for X is {vX}m/s(meters per second)")
+                elif cos0 == 60 or "60°":
+                    cos0 = 1/2
+                    vX = cos0*v0
+                    print(f"Your velocity for X is {vX}m/s(meters per second)")
+                else:
+                    print("Invalid degree")
+            else:
+                print("Invalid input")
+        else:
+            print("Invalid input")
+
 
             
