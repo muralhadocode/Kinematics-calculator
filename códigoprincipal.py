@@ -91,7 +91,10 @@ while i == True:
         print("2 - Horizontal range")
         print("3 - Maximum height")
         print("4 - Flight time")
-        print("5 - Go back")
+        print("5 - Vertical position over time")
+        print("6 - Horizontal position over time")
+        print("7 - Vertical velocity over time")
+        print("8 - Go back")
         pr_mo_slct = int(input("Type the equation you want to use: "))
 
         if pr_mo_slct == 1:
@@ -190,6 +193,62 @@ while i == True:
             else:
                 print("Invalid degree")
         elif pr_mo_slct == 5:
+            v0 = int(input("Type your initial velocity in m/s(meters per second): "))
+            sin0 = int(input("Type the sine of 0(theta) in degrees(only for 30°, 45° and 60°): "))
+            g = int(input("Type your gravity in m/s²(meters per second squared): "))
+            t = int(input("Type your time in s(seconds): "))
+            if sin0 == 30 or "30°":
+                sin0 = 1/2
+                y = v0*sin0*t-(g*t^2)/2
+                print(f"Your Y is {y}m(meters)")
+            elif sin0 == 45 or "45°":
+                sin0 = 2^0.5
+                y = v0*sin0*t-(g*t^2)/2
+                print(f"Your Y is {y}m(meters)")
+            elif sin0 == 60 or "60°":
+                sin0 = 3^0.5
+                y = v0*sin0*t-(g*t^2)/2
+                print(f"Your Y is {y}m(meters)")
+            else:
+                print("Invalid degree")
+        elif pr_mo_slct == 6:
+            v0 = int(input("Type your initial velocity in m/s(meters per second): "))
+            t = int(input("Type your time in s(seconds): "))
+            cos0 = int(input("Type the cossine of 0(theta) in degrees(only for 30°, 45° and 60°): "))
+            if cos0 == 30 or "30°":
+                cos0 = (3^0.5)/2
+                x = v0*cos0*t
+                print(f"Your X is {x}m(meters)")
+            elif cos0 == 45 or "45°":
+                cos0 = (2^0.5)/2
+                x = v0*cos0*t
+                print(f"Your X is {x}m(meters)")
+            elif cos0 == 60 or "60°":
+                cos0 = 1/2
+                x = v0*cos0*t
+                print(f"Your X is {x}m(meters)")
+            else:
+                print("Invalid degree")
+        elif pr_mo_slct == 7:
+            v0 = int(input("Type your initial velocity in m/s(meters per second): "))
+            sin0 = int(input("Type the sine of 0(theta) in degrees(only for 30°, 45° and 60°): "))
+            g = int(input("Type your gravity in m/s²(meters per second squared): "))
+            t = int(input("Type your time in s(seconds): "))
+            if sin0 == 30 or "30°":
+                sin0 = 1/2
+                vY = v0*sin0-g*t
+                print(f"Your velocity for Y is {vY}m/s(meters per second)")
+            elif sin0 == 45 or "45°":
+                sin0 = 2^0.5
+                vY = v0*sin0-g*t
+                print(f"Your velocity for Y is {vY}m/s(meters per second)")
+            elif sin0 == 60 or "60°":
+                sin0 = 3^0.5
+                vY = v0*sin0-g*t
+                print(f"Your velocity for Y is {vY}m/s(meters per second)")
+            else:
+                print("Invalid degree")
+        elif pr_mo_slct == 8:
             print("1 - Core equations")
             print("2 - Primary equations")
             print("3 - Projectile motion")
@@ -218,16 +277,7 @@ while i == True:
 
 
 
-
-
-
-
-
-
-
-
-
-
+            
     else:
          print("Invalid input")
 
