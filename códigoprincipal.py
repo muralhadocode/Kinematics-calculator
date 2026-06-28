@@ -256,6 +256,32 @@ while i == True:
             slct = int(input("Type the number of the part that you want to enter: "))
         else:
             print("Invalid input")
+    if slct == 4:
+        print("1 - Principles")
+        print("2 - Main equations")
+        ci_mo_slct = int(input("Type the part that you want to go in: "))
+        if ci_mo_slct == 1:
+            print("1 - Period")
+            print("2 - Frequency")
+            print("3 - Angular Frequency")
+            print("4 - Period-Frequency relation")
+            ci_mo_slct_pr = int(input("Type the equation youw ant to use: "))
+            if ci_mo_slct_pr == 1:
+                oo = int(input("Type your ω(omega) in rad/s(radians per second): "))
+                t = (2*3.14)/oo
+                print(f"Your period is {t}s(seconds)")
+            elif ci_mo_slct_pr == 2:
+                t = int(input("Type your period in s(seconds): "))
+                f = 1/t
+                print(f"Your frequency is {f}Hz(hertz)")
+            elif ci_mo_slct_pr == 3:
+                f = int(input("Type your frequency in Hz(hertz): "))
+                oo = 2*3.14*f
+                print(f"Your ω(omega) is {oo}rad/s(radians per second)")
+            elif ci_mo_slct_pr == 4:
+                f = int(input("Type your frequency in Hz(hertz): "))
+                t = 1/f
+                print(f"Your period is {t}s(seconds)")
 
 
 
@@ -273,11 +299,6 @@ while i == True:
 
 
 
-
-
-
-
-            
     else:
          print("Invalid input")
 
