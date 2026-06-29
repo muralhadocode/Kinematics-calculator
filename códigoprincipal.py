@@ -8,6 +8,7 @@ print("2 - Primary equations")
 print("3 - Projectile motion")
 print("4 - Circular movement")
 print("5 - Free fall")
+print("6 - Leave")
 
 slct = int(input("Type the number of the part that you want to enter: "))
 while i == True:
@@ -47,7 +48,7 @@ while i == True:
         else:
                 print("Invalid input")
     
-    if slct == 2:
+    elif slct == 2:
         print("1 - Velocity-Time")
         print("2 - Position-Time")
         print("3 - Velocity-Squared")
@@ -91,7 +92,7 @@ while i == True:
         else:
             print("Invalid input")
 
-    if slct == 3:
+    elif slct == 3:
         print("1 - Horizontal and vertical components")
         print("2 - Horizontal range")
         print("3 - Maximum height")
@@ -275,7 +276,7 @@ while i == True:
         else:
             print("Invalid input")
 
-    if slct == 4:
+    elif slct == 4:
         print("1 - Principles")
         print("2 - Main equations")
         print("3 - Go back")
@@ -285,9 +286,10 @@ while i == True:
             print("2 - Frequency")
             print("3 - Angular Frequency")
             print("4 - Period-Frequency relation")
+            print("5 - Go back")
             ci_mo_slct_pr = int(input("Type the equation you want to use: "))
             if ci_mo_slct_pr == 1:
-                
+                oo = int(input("Type your ω(omega) in rad/s(radians per second): "))
                 t = (2*3.14)/oo
                 print(f"Your period is {t}s(seconds)")
             elif ci_mo_slct_pr == 2:
@@ -320,7 +322,7 @@ while i == True:
                 print(f"Your ω(omega) is {oo}rad/s(radians per second)")
             elif ci_mo_slct_me == 2:
                 t = int(input("Type your period in s(seconds): "))
-                
+                r = int(input("Type your radius in m(meters): "))
                 v = (2*3.14*r)/t
                 print(f"Your linear velocity is {v}m/s(meters per second)")
             elif ci_mo_slct_me == 3:
@@ -369,15 +371,40 @@ while i == True:
             slct = int(input("Type the number of the part that you want to enter: "))
         else:
             print("Invalid input")
+    
+    elif slct == 5:
+        print("1 - Velocity")
+        print("2 - Height")
+        print("3 - Velocity-Height")
+        print("4 - Go back")
+        fe_fa_slct = int(input("Type the number of the equation that you want to use: "))
+        if fe_fa_slct == 1:
+            g = int(input("Type your gravity in m/s²(meters per second squared): "))
+            t = int(input("Type your time in s(seconds): "))
+            v = g*t
+            print(f"Your velocity is {v}m/s(meters per second)")
+        elif fe_fa_slct == 2:
+            g = int(input("Type your gravity in m/s²(meters per second squared): "))
+            t = int(input("Type your time in s(seconds): "))
+            h = (g*t^2)/2
+            print(f"Your height is {h}m(meters)")
+        elif fe_fa_slct == 3:
+            g = int(input("Type your gravity in m/s²(meters per second squared): "))
+            h = int(input("Type your height in m(meters): "))
+            v^2 = 2*g*h
+            print(f"Your velocity is {v}m/s(meters per second)")
+        elif fe_fa_slct == 4:
+            print("1 - Core equations")
+            print("2 - Primary equations")
+            print("3 - Projectile motion")
+            print("4 - Circular movement")
+            print("5 - Free fall")
 
-
-
-
-
-
-
-
-
+            slct = int(input("Type the number of the part that you want to enter: "))
+    
+    elif slct == 6:
+        print("Byee!")
+        i = False
     else:
          print("Invalid input")
 
