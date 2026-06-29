@@ -179,15 +179,15 @@ while i == True:
             g = int(input("Type your gravity in m/s²(meters per second squared): "))
             if sin0 == 30 or sin0 == "30°":
                 sin0 = 1/2
-                h = (v0**2*sin0^2)/2*g
+                h = (v0**2*sin0**2)/2*g
                 print(f"Your maximum height is {h}m(meters)")
             elif sin0 == 45 or sin0 == "45°":
                 sin0 = (2**0.5)/2
-                h = (v0**2*sin0^2)/2*g
+                h = (v0**2*sin0**2)/2*g
                 print(f"Your maximum height is {h}m(meters)")
             elif sin0 == 60 or sin0 == "60°":
                 sin0 = (3**0.5)/2
-                h = (v0**2*sin0^2)/2*g
+                h = (v0**2*sin0**2)/2*g
                 print(f"Your maximum height is {h}m(meters)")
             else:
                 print("Invalid degree")
@@ -338,12 +338,12 @@ while i == True:
                 if ci_mo_slct_me_ca == 1:
                     r = int(input("Type your radius in m(meters): "))
                     v = int(input("Type your velocity in m/s(meters per second): "))
-                    ac = v^2/r
+                    ac = v**2/r
                     print(f"Your centripetal acceleration for the linear part is {ac}m/s²(meters per second squared)")
                 elif ci_mo_slct_me_ca == 2: 
                     r = int(input("Type your radius in m(meters): "))
                     oo = int(input("Type your ω(omega) in rad/s(radians per second): "))
-                    ac = oo^2*r
+                    ac = oo**2*r
                     print(f"Your centripetal acceleration for the angular part is {ac}m/s²(meters per second squared)")
                 elif ci_mo_slct_me_ca == 3:
                     print("1 - Angular velocity")
@@ -386,12 +386,12 @@ while i == True:
         elif fe_fa_slct == 2:
             g = int(input("Type your gravity in m/s²(meters per second squared): "))
             t = int(input("Type your time in s(seconds): "))
-            h = (g*t^2)/2
+            h = (g*t**2)/2
             print(f"Your height is {h}m(meters)")
         elif fe_fa_slct == 3:
             g = int(input("Type your gravity in m/s²(meters per second squared): "))
             h = int(input("Type your height in m(meters): "))
-            v^2 = 2*g*h
+            v = (2*g*h)**0.5
             print(f"Your velocity is {v}m/s(meters per second)")
         elif fe_fa_slct == 4:
             print("1 - Core equations")
