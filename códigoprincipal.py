@@ -65,7 +65,7 @@ while i == True:
             v0 = int(input("Type your initial velocity in m/s(meters per second): "))
             a = int(input("Type your acceleration in m/s²(meters per second squared): "))
             t = int(input("Type your time in s(seconds): "))
-            dX = v0*t+(a*t^2)/2
+            dX = v0*t+(a*t**2)/2
             print(f"Your delta x is {dX}m(meters)")
         elif pr_eq_slct == 3:
             v0 = int(input("Type your initial velocity in m/s(meters per second): "))
@@ -73,7 +73,7 @@ while i == True:
             xfinal = int(input("Type your final x in m(meters): "))
             xinitial = int(input("Type your initial x in m(meters): "))
             dX = xfinal - xinitial
-            v^2 = v0^2+2*a*dX
+            v = (v0**2+2*a*dX)**0.5
             print(f"Your velocity is {v}m/s(meters per second)")
         elif pr_eq_slct == 4:
             v0 = int(input("Type your initial velocity in m/s(meters per second): "))
@@ -112,16 +112,16 @@ while i == True:
             if pr_mo_slct_hv == 1:
                 v0 = int(input("Type your initial velocity in m/s(meters per second: )"))
                 sin0 = int(input("Type the sine of 0(theta) in degrees(only for 30°, 45° and 60°): "))
-                if sin0 == 30 or "30°":
+                if sin0 == 30 or sin0 == "30°":
                     sin0 = 1/2
                     vY = sin0*v0
                     print(f"Your velocity for Y is {vY}m/s(meters per second)")
-                elif sin0 == 45 or "45°":
-                    sin0 = 2^0.5
+                elif sin0 == 45 or sin0 == "45°":
+                    sin0 = (2**0.5)/2
                     vY = sin0*v0
                     print(f"Your velocity for Y is {vY}m/s(meters per second)")
-                elif sin0 == 60 or "60°":
-                    sin0 = 3^0.5
+                elif sin0 == 60 or sin0 == "60°":
+                    sin0 = (3**0.5)/2
                     vY = sin0*v0
                     print(f"Your velocity for Y is {vY}m/s(meters per second)")
                 else:
@@ -129,15 +129,15 @@ while i == True:
             elif pr_mo_slct_hv == 2:
                 v0 = int(input("Type your initial velocity in m/s(meters per second: )"))
                 cos0 = int(input("Type the cossine of 0(theta) in degrees(only for 30°, 45° and 60°): "))
-                if cos0 == 30 or "30°":
-                    cos0 = (3^0.5)/2
+                if cos0 == 30 or cos0 == "30°":
+                    cos0 = (3**0.5)/2
                     vX = cos0*v0
                     print(f"Your velocity for X is {vX}m/s(meters per second)")
-                elif cos0 == 45 or "45°":
-                    cos0 = (2^0.5)/2
+                elif cos0 == 45 or cos0 == "45°":
+                    cos0 = (2**0.5)/2
                     vX = cos0*v0
                     print(f"Your velocity for X is {vX}m/s(meters per second)")
-                elif cos0 == 60 or "60°":
+                elif cos0 == 60 or cos0 == "60°":
                     cos0 = 1/2
                     vX = cos0*v0
                     print(f"Your velocity for X is {vX}m/s(meters per second)")
@@ -159,17 +159,17 @@ while i == True:
             v0 = int(input("Type your initial velocity in m/s(meters per second): "))
             sin0 = int(input("Type the sine of 0(theta) in degrees(only for 30°, 45° and 60°): "))
             g = int(input("Type your gravity in m/s²(meters per second squared): "))
-            if sin0 == 30 or "30°":
+            if sin0 == 30 or sin0 == "30°":
                 sin0 = 1/2
-                r = (v0^2*sin0*2)/g
+                r = (v0**2*sin0*2)/g
                 print(f"Your horizontal range is {r}m(meters)")
-            elif sin0 == 45 or "45°":
-                sin0 = 2^0.5
-                r = (v0^2*sin0*2)/g
+            elif sin0 == 45 or sin0 == "45°":
+                sin0 = (2**0.5)/2
+                r = (v0**2*sin0*2)/g
                 print(f"Your horizontal range is {r}m(meters)")
-            elif sin0 == 60 or "60°":
-                sin0 = 3^0.5
-                r = (v0^2*sin0*2)/g
+            elif sin0 == 60 or sin0 == "60°":
+                sin0 = (3**0.5)/2
+                r = (v0**2*sin0*2)/g
                 print(f"Your horizontal range is {r}m(meters)")
             else:
                 print("Invalid degree")
@@ -177,17 +177,17 @@ while i == True:
             v0 = int(input("Type your initial velocity in m/s(meters per second): "))
             sin0 = int(input("Type the sine of 0(theta) in degrees(only for 30°, 45° and 60°): "))
             g = int(input("Type your gravity in m/s²(meters per second squared): "))
-            if sin0 == 30 or "30°":
+            if sin0 == 30 or sin0 == "30°":
                 sin0 = 1/2
-                h = (v0^2*sin0^2)/2*g
+                h = (v0**2*sin0^2)/2*g
                 print(f"Your maximum height is {h}m(meters)")
-            elif sin0 == 45 or "45°":
-                sin0 = 2^0.5
-                h = (v0^2*sin0^2)/2*g
+            elif sin0 == 45 or sin0 == "45°":
+                sin0 = (2**0.5)/2
+                h = (v0**2*sin0^2)/2*g
                 print(f"Your maximum height is {h}m(meters)")
-            elif sin0 == 60 or "60°":
-                sin0 = 3^0.5
-                h = (v0^2*sin0^2)/2*g
+            elif sin0 == 60 or sin0 == "60°":
+                sin0 = (3**0.5)/2
+                h = (v0**2*sin0^2)/2*g
                 print(f"Your maximum height is {h}m(meters)")
             else:
                 print("Invalid degree")
@@ -195,16 +195,16 @@ while i == True:
             v0 = int(input("Type your initial velocity in m/s(meters per second): "))
             sin0 = int(input("Type the sine of 0(theta) in degrees(only for 30°, 45° and 60°): "))
             g = int(input("Type your gravity in m/s²(meters per second squared): "))
-            if sin0 == 30 or "30°":
+            if sin0 == 30 or sin0 == "30°":
                 sin0 = 1/2
                 t = (v0*2*sin0)/g
                 print(f"Your maximum height is {t}m(meters)")
-            elif sin0 == 45 or "45°":
-                sin0 = 2^0.5
+            elif sin0 == 45 or sin0 == "45°":
+                sin0 = (2**0.5)/2
                 t = (v0*2*sin0)/g
                 print(f"Your maximum height is {t}m(meters)")
-            elif sin0 == 60 or "60°":
-                sin0 = 3^0.5
+            elif sin0 == 60 or sin0 == "60°":
+                sin0 = (3**0.5)/2
                 t = (v0*2*sin0)/g
                 print(f"Your maximum height is {t}m(meters)")
             else:
@@ -214,17 +214,17 @@ while i == True:
             sin0 = int(input("Type the sine of 0(theta) in degrees(only for 30°, 45° and 60°): "))
             g = int(input("Type your gravity in m/s²(meters per second squared): "))
             t = int(input("Type your time in s(seconds): "))
-            if sin0 == 30 or "30°":
+            if sin0 == 30 or sin0 == "30°":
                 sin0 = 1/2
-                y = v0*sin0*t-(g*t^2)/2
+                y = v0*sin0*t-(g*t**2)/2
                 print(f"Your Y is {y}m(meters)")
-            elif sin0 == 45 or "45°":
-                sin0 = 2^0.5
-                y = v0*sin0*t-(g*t^2)/2
+            elif sin0 == 45 or sin0 == "45°":
+                sin0 = (2**0.5)/2
+                y = v0*sin0*t-(g*t**2)/2
                 print(f"Your Y is {y}m(meters)")
-            elif sin0 == 60 or "60°":
-                sin0 = 3^0.5
-                y = v0*sin0*t-(g*t^2)/2
+            elif sin0 == 60 or sin0 == "60°":
+                sin0 = (3**0.5)/2
+                y = v0*sin0*t-(g*t**2)/2
                 print(f"Your Y is {y}m(meters)")
             else:
                 print("Invalid degree")
@@ -232,15 +232,15 @@ while i == True:
             v0 = int(input("Type your initial velocity in m/s(meters per second): "))
             t = int(input("Type your time in s(seconds): "))
             cos0 = int(input("Type the cossine of 0(theta) in degrees(only for 30°, 45° and 60°): "))
-            if cos0 == 30 or "30°":
-                cos0 = (3^0.5)/2
+            if cos0 == 30 or cos0 == "30°":
+                cos0 = (3**0.5)/2
                 x = v0*cos0*t
                 print(f"Your X is {x}m(meters)")
-            elif cos0 == 45 or "45°":
-                cos0 = (2^0.5)/2
+            elif cos0 == 45 or cos0 == "45°":
+                cos0 = (2**0.5)/2
                 x = v0*cos0*t
                 print(f"Your X is {x}m(meters)")
-            elif cos0 == 60 or "60°":
+            elif cos0 == 60 or cos0 == "60°":
                 cos0 = 1/2
                 x = v0*cos0*t
                 print(f"Your X is {x}m(meters)")
@@ -251,16 +251,16 @@ while i == True:
             sin0 = int(input("Type the sine of 0(theta) in degrees(only for 30°, 45° and 60°): "))
             g = int(input("Type your gravity in m/s²(meters per second squared): "))
             t = int(input("Type your time in s(seconds): "))
-            if sin0 == 30 or "30°":
+            if sin0 == 30 or sin0 == "30°":
                 sin0 = 1/2
                 vY = v0*sin0-g*t
                 print(f"Your velocity for Y is {vY}m/s(meters per second)")
-            elif sin0 == 45 or "45°":
-                sin0 = 2^0.5
+            elif sin0 == 45 or sin0 == "45°":
+                sin0 = (2**0.5)/2
                 vY = v0*sin0-g*t
                 print(f"Your velocity for Y is {vY}m/s(meters per second)")
-            elif sin0 == 60 or "60°":
-                sin0 = 3^0.5
+            elif sin0 == 60 or sin0 == "60°":
+                sin0 = (3**0.5)/2
                 vY = v0*sin0-g*t
                 print(f"Your velocity for Y is {vY}m/s(meters per second)")
             else:
