@@ -1,8 +1,8 @@
+# K.C. - The kinematics calculator
+The name gives out, but its a calculator for kinematics, every measuring unit is up to S.I. (International measures system) so if you have something that is not up to it, make sure to transform it :D
 
-# Calculadora-cinemática
-É uma calculadora das contas da cinemática que é uma das áreas da física que estuda os movimentos, ela ta em fase de teste porque ao longo do tempo eu irei atualizando ela, ela também é 100% feita em python e manualmente. 
-Ela segue todas as medidas do SI (Sistema internacional de unidades), o que significa que voce DEVE SEMPRE conveter todas as unidades de tempo, peso, velocidade, etc. para as que são os padrões do SI além disso futuramente planejo lançar ela como aplicativo de contas.
-Ela também tem todas as contas de MU, MUV e MRUV (no momento as outras estão sendo desenvolvidas) e em cada uma das equações você tem a opção de encontrar todas as icógnitas, eu digo TODAS.
-ELa contém mais de 700 linhas atualmente.
-![https://imgur.com/a/Mfqa5xB](https://imgur.com/a/Mfqa5xB)
-13/05/2026
+## Why did i build this?
+When i was at school, in physics class, i was learning kinematics(the area in physics that i hat the most >:( ) and i was really bad at it, it had a lot of homework too and i sucked at that, so i thought to myself at that time, i was learning python and i knew python can can calculate stuff for you so i thought on building one, i build one in a week it good and all but, the project was abandoned -_-, after some time, i came back and renovated it but for the english people and on the future i want to translate it :D
+
+## How it works!
+You use numbers to choose the equation you want to use, then you put your values, if it asks for an angle, you can either put the raw number or the number with the symbol (ex: raw number = 30, number with symbol 30°), it only supports the one that on the tab (sin, cos and tan of 30, 45 and 60).
