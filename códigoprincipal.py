@@ -179,15 +179,15 @@ while i == True:
             g = int(input("Type your gravity in m/s²(meters per second squared): "))
             if sin0 == 30 or sin0 == "30°":
                 sin0 = 1/2
-                h = (v0**2*sin0**2)/2*g
+                h = (v0**2*sin0**2)/(2*g)
                 print(f"Your maximum height is {h}m(meters)")
             elif sin0 == 45 or sin0 == "45°":
                 sin0 = (2**0.5)/2
-                h = (v0**2*sin0**2)/2*g
+                h = (v0**2*sin0**2)/(2*g)
                 print(f"Your maximum height is {h}m(meters)")
             elif sin0 == 60 or sin0 == "60°":
                 sin0 = (3**0.5)/2
-                h = (v0**2*sin0**2)/2*g
+                h = (v0**2*sin0**2)/(2*g)
                 print(f"Your maximum height is {h}m(meters)")
             else:
                 print("Invalid degree")
@@ -304,6 +304,11 @@ while i == True:
                 f = int(input("Type your frequency in Hz(hertz): "))
                 t = 1/f
                 print(f"Your period is {t}s(seconds)")
+            elif ci_mo_slct_pr == 5:
+                print("1 - Principles")
+                print("2 - Main equations")
+                print("3 - Go back")
+                ci_mo_slct = int(input("Type the part that you want to go in: "))
         elif ci_mo_slct == 2:
             print("1 - Angular velocity")
             print("2 - Linear velocity")
