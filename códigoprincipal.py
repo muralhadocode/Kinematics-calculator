@@ -7,6 +7,7 @@ print("1 - Core equations")
 print("2 - Primary equations")
 print("3 - Projectile motion")
 print("4 - Circular movement")
+print("5 - Free fall")
 
 slct = int(input("Type the number of the part that you want to enter: "))
 while i == True:
@@ -40,6 +41,8 @@ while i == True:
             print("2 - Primary equations")
             print("3 - Projectile motion")
             print("4 - Circular movement")
+            print("5 - Free fall")
+
             slct = int(input("Type the number of the part that you want to enter: "))
         else:
                 print("Invalid input")
@@ -82,6 +85,8 @@ while i == True:
             print("2 - Primary equations")
             print("3 - Projectile motion")
             print("4 - Circular movement")
+            print("5 - Free fall")
+
             slct = int(input("Type the number of the part that you want to enter: "))
         else:
             print("Invalid input")
@@ -253,9 +258,12 @@ while i == True:
             print("2 - Primary equations")
             print("3 - Projectile motion")
             print("4 - Circular movement")
+            print("5 - Free fall")
+
             slct = int(input("Type the number of the part that you want to enter: "))
         else:
             print("Invalid input")
+
     if slct == 4:
         print("1 - Principles")
         print("2 - Main equations")
@@ -265,9 +273,9 @@ while i == True:
             print("2 - Frequency")
             print("3 - Angular Frequency")
             print("4 - Period-Frequency relation")
-            ci_mo_slct_pr = int(input("Type the equation youw ant to use: "))
+            ci_mo_slct_pr = int(input("Type the equation you want to use: "))
             if ci_mo_slct_pr == 1:
-                oo = int(input("Type your ω(omega) in rad/s(radians per second): "))
+                
                 t = (2*3.14)/oo
                 print(f"Your period is {t}s(seconds)")
             elif ci_mo_slct_pr == 2:
@@ -282,14 +290,55 @@ while i == True:
                 f = int(input("Type your frequency in Hz(hertz): "))
                 t = 1/f
                 print(f"Your period is {t}s(seconds)")
+        elif ci_mo_slct == 2:
+            print("1 - Angular velocity")
+            print("2 - Linear velocity")
+            print("3 - Linear-Angular relation")
+            print("4 - Centripetal acceleration")
+            ci_mo_slct_me = int(input("Type the number of the equation you want to use: "))
+            if ci_mo_slct_me == 1:
+                tfinal = int(input("Type your final time in s(seconds): "))
+                tinitial = int(input("Type your initial time in s(seconds): "))
+                final0 = int(input("Type your final 0(theta) in °(degrees without the little symbol)"))
+                initial0 = int(input("Type your initial 0(theta) in "))
+                dT = tfinal-tinitial
+                d0 = final0-initial0
+                oo = d0/dT
+                print(f"Your ω(omega) is {oo}rad/s(radians per second)")
+            elif ci_mo_slct_me == 2:
+                t = int(input("Type your period in s(seconds): "))
+                
+                v = (2*3.14*r)/t
+                print(f"Your linear velocity is {v}m/s(meters per second)")
+            elif ci_mo_slct_me == 3:
+                r = int(input("Type your radius in m(meters): "))
+                oo = int(input("Type your ω(omega) in rad/s(radians per second): "))
+                v = oo*r
+                print(f"Your linear velocity is {v}m/s(meters per second)")
+            elif ci_mo_slct_me == 4:
+                print("1 - Linear")
+                print("2 - Angular")
+                ci_mo_slct_me_ca = int(input("Type the number of the equation you want to use"))
+                if ci_mo_slct_me_ca == 1:
+                    r = int(input("Type your radius in m(meters): "))
+                    v = int(input("Type your velocity in m/s(meters per second): "))
+                    ac = v^2/r
+                    print(f"Your centripetal acceleration for the linear part is {ac}m/s²(meters per second squared)")
+                elif ci_mo_slct_me_ca == 2: 
+                    r = int(input("Type your radius in m(meters): "))
+                    oo = int(input("Type your ω(omega) in rad/s(radians per second): "))
+                    ac = oo^2*r
+                    print(f"Your centripetal acceleration for the angular part is {ac}m/s²(meters per second squared)")
+        elif ci_mo_slct == 3:
+            print("1 - Core equations")
+            print("2 - Primary equations")
+            print("3 - Projectile motion")
+            print("4 - Circular movement")
+            print("5 - Free fall")
 
-
-
-
-
-
-
-
+            slct = int(input("Type the number of the part that you want to enter: "))
+        else:
+            print("Invalid input")
 
 
 
