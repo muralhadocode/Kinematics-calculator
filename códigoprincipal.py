@@ -295,6 +295,7 @@ while i == True:
             print("2 - Linear velocity")
             print("3 - Linear-Angular relation")
             print("4 - Centripetal acceleration")
+            print("5 - Go back")
             ci_mo_slct_me = int(input("Type the number of the equation you want to use: "))
             if ci_mo_slct_me == 1:
                 tfinal = int(input("Type your final time in s(seconds): "))
@@ -318,6 +319,7 @@ while i == True:
             elif ci_mo_slct_me == 4:
                 print("1 - Linear")
                 print("2 - Angular")
+                print("3 - Go back")
                 ci_mo_slct_me_ca = int(input("Type the number of the equation you want to use"))
                 if ci_mo_slct_me_ca == 1:
                     r = int(input("Type your radius in m(meters): "))
@@ -329,6 +331,20 @@ while i == True:
                     oo = int(input("Type your ω(omega) in rad/s(radians per second): "))
                     ac = oo^2*r
                     print(f"Your centripetal acceleration for the angular part is {ac}m/s²(meters per second squared)")
+                elif ci_mo_slct_me_ca == 3:
+                    print("1 - Angular velocity")
+                    print("2 - Linear velocity")
+                    print("3 - Linear-Angular relation")
+                    print("4 - Centripetal acceleration")
+                    ci_mo_slct_me_ca = int(input("Type the number of the equation you want to use: "))
+                else:
+                    print("Invalid input")
+            elif ci_mo_slct_me == 5:
+                print("1 - Principles")
+                print("2 - Main equations")
+                ci_mo_slct = int(input("Type the part that you want to go in: "))
+            else:
+                print("Invalid input")
         elif ci_mo_slct == 3:
             print("1 - Core equations")
             print("2 - Primary equations")
