@@ -105,6 +105,7 @@ while i == True:
         if pr_mo_slct == 1:
             print("1 - Y velocity")
             print("2 - X velocity")
+            print("3 - Go back")
             pr_mo_slct_hv = int(input("Type the equation you want to use: "))
             
             if pr_mo_slct_hv == 1:
@@ -141,6 +142,16 @@ while i == True:
                     print(f"Your velocity for X is {vX}m/s(meters per second)")
                 else:
                     print("Invalid degree")
+            elif pr_mo_slct_hv == 3:
+                print("1 - Horizontal and vertical components")
+                print("2 - Horizontal range")
+                print("3 - Maximum height")
+                print("4 - Flight time")
+                print("5 - Vertical position over time")
+                print("6 - Horizontal position over time")
+                print("7 - Vertical velocity over time")
+                print("8 - Go back")
+                pr_mo_slct = int(input("Type the equation you want to use: "))
             else:
                 print("Invalid input")
         elif pr_mo_slct == 2:
@@ -267,6 +278,7 @@ while i == True:
     if slct == 4:
         print("1 - Principles")
         print("2 - Main equations")
+        print("3 - Go back")
         ci_mo_slct = int(input("Type the part that you want to go in: "))
         if ci_mo_slct == 1:
             print("1 - Period")
@@ -336,12 +348,14 @@ while i == True:
                     print("2 - Linear velocity")
                     print("3 - Linear-Angular relation")
                     print("4 - Centripetal acceleration")
+                    print("5 - Go back")
                     ci_mo_slct_me_ca = int(input("Type the number of the equation you want to use: "))
                 else:
                     print("Invalid input")
             elif ci_mo_slct_me == 5:
                 print("1 - Principles")
                 print("2 - Main equations")
+                print("3 - Go back")
                 ci_mo_slct = int(input("Type the part that you want to go in: "))
             else:
                 print("Invalid input")
